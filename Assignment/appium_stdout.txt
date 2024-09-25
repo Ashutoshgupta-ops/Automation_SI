@@ -1,0 +1,58 @@
+[38;5;112m[Appium][0m Welcome to Appium v2.11.3
+[38;5;112m[Appium][0m Non-default server args:
+[38;5;112m[Appium][0m { address: [32m'localhost'[39m, port: [33m5252[39m, sessionOverride: [33mtrue[39m }
+[38;5;112m[Appium][0m The autodetected Appium home path: C:\Users\Ashutosh.gupta\.appium
+[38;5;112m[Appium][0m Attempting to load driver uiautomator2...
+[38;5;112m[Appium][0m Requiring driver at C:\Users\Ashutosh.gupta\.appium\node_modules\appium-uiautomator2-driver\build\index.js
+[38;5;112m[Appium][0m AndroidUiautomator2Driver has been successfully loaded in 1.381s
+[38;5;112m[Appium][0m Appium REST http interface listener started on http://localhost:5252
+[38;5;112m[Appium][0m Available drivers:
+[38;5;112m[Appium][0m   - uiautomator2@3.7.2 (automationName 'UiAutomator2')
+[38;5;112m[Appium][0m No plugins have been installed. Use the "appium plugin" command to install the one(s) you want to use.
+[38;5;86m[HTTP][0m Request idempotency key: 8e3c1b96-257a-466b-8ada-1c436b7073c4
+[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/session[39m [90m{"capabilities":{"firstMatch":[{}],"alwaysMatch":{"platformName":"android","appium:devicename":"Oneplus","appium:app":"D:\\Appium Project\\app\\uefa-gaming-10.2.0-126748230-pre.apk","appium:automationName":"UiAutomator2","appium:udid":"emulator-5554"}}}[39m
+[38;5;44m[AppiumDriver@8bc5][0m Calling AppiumDriver.createSession() with args: [null,null,{"firstMatch":[{}],"alwaysMatch":{"platformName":"android","appium:devicename":"Oneplus","appium:app":"D:\\Appium Project\\app\\uefa-gaming-10.2.0-126748230-pre.apk","appium:automationName":"UiAutomator2","appium:udid":"emulator-5554"}}]
+[38;5;44m[AppiumDriver@8bc5][0m Event 'newSessionRequested' logged at 1727244395056 (11:36:35 GMT+0530 (India Standard Time))
+[38;5;112m[Appium][0m Attempting to find matching driver for automationName 'UiAutomator2' and platformName 'android'
+[38;5;112m[Appium][0m The 'uiautomator2' driver was installed and matched caps.
+[38;5;112m[Appium][0m Will require it at C:\Users\Ashutosh.gupta\.appium\node_modules\appium-uiautomator2-driver
+[38;5;112m[Appium][0m Requiring driver at C:\Users\Ashutosh.gupta\.appium\node_modules\appium-uiautomator2-driver\build\index.js
+[38;5;44m[AppiumDriver@8bc5][0m Appium v2.11.3 creating new AndroidUiautomator2Driver (v3.7.2) session
+[38;5;44m[AppiumDriver@8bc5][0m Checking BaseDriver versions for Appium and AndroidUiautomator2Driver
+[38;5;44m[AppiumDriver@8bc5][0m Appium's BaseDriver version is 9.11.3
+[38;5;44m[AppiumDriver@8bc5][0m AndroidUiautomator2Driver's BaseDriver version is 9.11.3
+[38;5;44m[AppiumDriver@8bc5][0m There are no active sessions for cleanup
+[38;5;-68m[AndroidUiautomator2Driver@3ce4][0m 
+[38;5;-68m[AndroidUiautomator2Driver@3ce4][0m Creating session with W3C capabilities: {
+  "alwaysMatch": {
+    "platformName": "android",
+    "appium:devicename": "Oneplus",
+    "appium:app": "D:\\Appium Project\\app\\uefa-gaming-10.2.0-126748230-pre.apk",
+    "appium:automationName": "UiAutomator2",
+    "appium:udid": "emulator-5554"
+  },
+  "firstMatch": [
+    {}
+  ]
+}
+[38;5;-68m[AndroidUiautomator2Driver@3ce4][0m The following provided capabilities were not recognized by this driver:
+[38;5;-68m[AndroidUiautomator2Driver@3ce4][0m   devicename
+[38;5;164m[8acd45e2][0m[38;5;-68m[AndroidUiautomator2Driver@3ce4][0m Session created with session id: 8acd45e2-2ab4-4a51-9e33-3b4d9c507d10
+[38;5;164m[8acd45e2][0m[38;5;229m[ADB][0m Found 2 'build-tools' folders under 'C:\Users\Ashutosh.gupta\AppData\Local\Android\Sdk' (newest first):
+[38;5;164m[8acd45e2][0m[38;5;229m[ADB][0m     C:\Users\Ashutosh.gupta\AppData\Local\Android\Sdk\build-tools\35.0.0
+[38;5;164m[8acd45e2][0m[38;5;229m[ADB][0m     C:\Users\Ashutosh.gupta\AppData\Local\Android\Sdk\build-tools\34.0.0
+[38;5;164m[8acd45e2][0m[38;5;229m[ADB][0m Using 'adb.exe' from 'C:\Users\Ashutosh.gupta\AppData\Local\Android\Sdk\platform-tools\adb.exe'
+[38;5;164m[8acd45e2][0m[38;5;229m[ADB][0m Running 'C:\Users\Ashutosh.gupta\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 start-server'
+[38;5;164m[8acd45e2][0m[38;5;-68m[AndroidUiautomator2Driver@3ce4][0m Retrieving device list
+[38;5;164m[8acd45e2][0m[38;5;229m[ADB][0m Trying to find connected Android devices
+[38;5;164m[8acd45e2][0m[38;5;229m[ADB][0m Getting connected devices
+[38;5;164m[8acd45e2][0m[38;5;229m[ADB][0m Connected devices: [{"udid":"8d4cdc2f","state":"device"}]
+[38;5;164m[8acd45e2][0m[38;5;-68m[AndroidUiautomator2Driver@3ce4][0m Deleting UiAutomator2 session
+[38;5;164m[8acd45e2][0m[38;5;44m[AppiumDriver@8bc5][0m Event 'newSessionStarted' logged at 1727244395175 (11:36:35 GMT+0530 (India Standard Time))
+[38;5;164m[8acd45e2][0m[38;5;44m[AppiumDriver@8bc5][0m Encountered internal error running command: Error: Device emulator-5554 was not in the list of connected devices
+    at Object.errorWithException (C:\Users\Ashutosh.gupta\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\support\lib\logging.js:41:45)
+    at Object.errorAndThrow (C:\Users\Ashutosh.gupta\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\support\lib\logging.js:44:18)
+    at AndroidUiautomator2Driver.getDeviceInfoFromCaps (C:\Users\Ashutosh.gupta\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\device\common.js:42:24)
+    at AndroidUiautomator2Driver.createSession (C:\Users\Ashutosh.gupta\.appium\node_modules\appium-uiautomator2-driver\lib\driver.ts:365:30)
+    at AppiumDriver.createSession (C:\Users\Ashutosh.gupta\AppData\Roaming\npm\node_modules\appium\lib\appium.js:731:35)
+[38;5;164m[8acd45e2][0m[38;5;86m[HTTP][0m [37m<-- POST /session [39m[31m500[39m [90m159 ms - 706[39m [90m[39m
