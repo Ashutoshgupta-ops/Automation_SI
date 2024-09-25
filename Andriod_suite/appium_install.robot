@@ -260,8 +260,6 @@ Transfers
     ...     devicename=Pixel      app=${EXECDIR}${/}app${/}uefa-gaming-10.1.0-125045098-pre.apk
     ...     automationName=UiAutomator2     udid=emulator-5556
 
-
-
     Set Appium Timeout    20s
 
     Wait Until Page Contains Element    //android.widget.TextView[@text="Let's start"]
@@ -352,5 +350,97 @@ Transfers
 #Reset Team
     Wait And Click Element    //android.widget.Button[@resource-id="com.uefa.eurofantasy.adhoc:id/btn_primary"]
     Sleep    5s
+
+Matches
+
+    Open Application    remote_url=http://localhost:4723     platformName=android
+    ...     devicename=Pixel      app=${EXECDIR}${/}app${/}uefa-gaming-10.1.0-125045098-pre.apk
+    ...     automationName=UiAutomator2     udid=emulator-5556
+
+    Set Appium Timeout    30s
+
+    Wait Until Page Contains Element    //android.widget.TextView[@text="Let's start"]
+    Click Element    //android.widget.TextView[@text="Let's start"]
+
+    Wait Until Page Contains Element    //android.widget.Button[@resource-id="com.uefa.eurofantasy.adhoc:id/btn_allow_all"]
+    Click Element       //android.widget.Button[@resource-id="com.uefa.eurofantasy.adhoc:id/btn_allow_all"]
+
+    Wait Until Page Contains Element    //androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View[1]/android.widget.Button
+    Click Element    //androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View[1]/android.widget.Button
+
+
+    Wait Until Page Contains Element    //android.widget.TextView[@text="Fantasy Football"]
+    Click Element    //android.widget.TextView[@text="Fantasy Football"]
+
+    Wait Until Page Contains Element    //android.widget.Button[@resource-id="com.uefa.eurofantasy.adhoc:id/btn_login_to_play"]
+    Click Element    //android.widget.Button[@resource-id="com.uefa.eurofantasy.adhoc:id/btn_login_to_play"]
+
+
+    Wait Until Page Contains Element    //android.widget.EditText[@resource-id="gigya-loginID-75579930407612940"]
+    Input Text    //android.widget.EditText[@resource-id="gigya-loginID-75579930407612940"]    pre103@mailinator.com
+
+    Sleep    5s
+
+    ${output}       Run Keyword And Ignore Error         Input Text    //android.widget.EditText[@resource-id="gigya-password-32665041627364124"]    Sportz@2022
+
+    WHILE    '${output}[0]'=='FAIL'
+         Swipe    915    2177    934    1298
+         ${output}       Run Keyword And Ignore Error         Input Text    //android.widget.EditText[@resource-id="gigya-password-32665041627364124"]    Sportz@2022
+
+    END
+
+    Wait Until Page Contains Element    //android.widget.Button[@text="Submit"]
+    Click Element    //android.widget.Button[@text="Submit"]
+
+    #Overview
+    Wait Until Page Contains Element        //android.widget.Button[@resource-id="com.uefa.eurofantasy.adhoc:id/btn_view_team"]
+    Click Element       //android.widget.Button[@resource-id="com.uefa.eurofantasy.adhoc:id/btn_view_team"]
+    Sleep    5s
+    @{firstFinger}	create list	${815}	${1517}
+
+    Tap with Positions	${1000}	    ${firstFinger}
+#Matches
+    Wait And Click Element    xpath=(//android.widget.ImageView[@resource-id="com.uefa.eurofantasy.adhoc:id/navigation_bar_item_icon_view"])[3]
+
+    Wait And Click Element    //android.widget.FrameLayout[@resource-id="com.uefa.eurofantasy.adhoc:id/nav_host_home"]/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.view.View[1]/android.view.View
+
+    
+Login Without Team
+
+    Open Application    remote_url=http://localhost:4723     platformName=android
+    ...     devicename=Pixel      app=${EXECDIR}${/}app${/}uefa-gaming-10.1.0-125045098-pre.apk
+    ...     automationName=UiAutomator2     udid=emulator-5556
+
+    Set Appium Timeout    30s
+
+    Wait Until Page Contains Element    //android.widget.TextView[@text="Let's start"]
+    Click Element    //android.widget.TextView[@text="Let's start"]
+
+    Wait Until Page Contains Element    //android.widget.Button[@resource-id="com.uefa.eurofantasy.adhoc:id/btn_allow_all"]
+    Click Element       //android.widget.Button[@resource-id="com.uefa.eurofantasy.adhoc:id/btn_allow_all"]
+#Hamburger
+    Wait And Click Element    //androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View[1]/android.widget.Button
+#log in
+    Wait And Click Element    //android.widget.TextView[@text="Already have an account? Log in"]
+
+    Sleep  5s
+#email
+    Wait And Click Element    //android.widget.EditText[@resource-id="gigya-loginID-75579930407612940"]
+    Input Text    //android.widget.EditText[@resource-id="gigya-loginID-75579930407612940"]    pre116@mailinator.com
+#pass
+    Wait And Click Element    //android.widget.EditText[@resource-id="gigya-password-32665041627364124"]
+    Input Text    //android.widget.EditText[@resource-id="gigya-password-32665041627364124"]    Sportz@2022
+
+    Swipe By Percent    80    10    90    50
+#submit button
+    Wait Until Page Contains Element    //android.widget.Button[@text="Submit"]
+    Click Element    //android.widget.Button[@text="Submit"]
+
+    Swipe By Percent    50    50    50    90
+
+    Swipe By Percent    start_x    start_y    end_x    end_y
+
+
+
 
 
