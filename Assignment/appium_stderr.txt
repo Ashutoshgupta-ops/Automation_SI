@@ -1,0 +1,2 @@
+[38;5;164m[8acd45e2][0m[38;5;-68m[AndroidUiautomator2Driver@3ce4][0m [ 'Device emulator-5554 was not in the list of connected devices' ]
+^C
