@@ -21,3 +21,6 @@ Create Team
     Click Element    //div[@class="si-btn si-btn--primary"]                  ##Pick ur Squad - COntinue
     Click Element    //div[@class="si-btn si-btn--primary"]                  ##Pick Your 11
     Run Keyword And Ignore Error    Click Element    //div[@class="si-btn si-btn--primary"]
+
+Create Team
+

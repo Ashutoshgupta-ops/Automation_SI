@@ -1,0 +1,17 @@
+1727245751321	geckodriver	INFO	Listening on 127.0.0.1:52815
+1727245754381	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "52816" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\ASHUTO~1.GUP\\AppData\\Local\\Temp\\rust_mozprofilezwb2lQ"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1727245755016	Marionette	INFO	Marionette enabled
+1727245755152	Marionette	INFO	Listening on port 52826
+WebDriver BiDi listening on ws://127.0.0.1:52816
+Read port: 52826
+1727245755369	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:52816/devtools/browser/16183e70-1896-4c06-a1b4-5e13f37c7528
+JavaScript error: https://panenka-pre.uefa.com/panenka/p-45474425.js, line 2: Error: Constructor for "pk-icon#undefined" was not found
+JavaScript error: https://panenka-pre.uefa.com/panenka/p-45474425.js, line 2: Error: Constructor for "pk-icon#undefined" was not found
+JavaScript error: https://panenka-pre.uefa.com/panenka/p-45474425.js, line 2: Error: Constructor for "pk-icon#undefined" was not found
+JavaScript error: https://panenka-pre.uefa.com/panenka/p-45474425.js, line 2: Error: Constructor for "pk-icon#undefined" was not found
+1727245760941	Marionette	INFO	Stopped listening on port 52826
+Dynamically enable window occlusion 1

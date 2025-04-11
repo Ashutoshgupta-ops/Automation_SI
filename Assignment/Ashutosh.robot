@@ -20,8 +20,8 @@ Wait And Click Element
 *** Test Cases ***
 Login GH Test
     Open Application    remote_url=http://localhost:5252     platformName=android
-    ...     devicename=Oneplus      app=${EXECDIR}${/}app${/}uefa-gaming-10.1.0-125045098-pre.apk
-    ...     automationName=UiAutomator2     udid=8d4cdc2f
+    ...     devicename=vivo 1723      app=${EXECDIR}${/}app${/}uefa-gaming-10.7.1-143163962-pre.apk
+    ...     automationName=UiAutomator2     udid=af1f9b67
 
     Set Appium Timeout    20s
 
@@ -354,9 +354,9 @@ Matches Test
 
 Login Without Team Test
 
-    Open Application    remote_url=http://localhost:4723     platformName=android
-    ...     devicename=Pixel      app=${EXECDIR}${/}app${/}uefa-gaming-10.1.0-125045098-pre.apk
-    ...     automationName=UiAutomator2     udid=8d4cdc2f
+    Open Application    remote_url=http://localhost:5252     platformName=android
+    ...     devicename=vivo 1723      app=${EXECDIR}${/}app${/}uefa-gaming-10.7.1-143163962-pre.apk
+    ...     automationName=UiAutomator2     udid=af1f9b67
     Set Appium Timeout    10s
 
     Wait Until Page Contains Element    //android.widget.TextView[@text="Let's start"]
@@ -502,6 +502,38 @@ View Team test
     #Click Element       //android.widget.Button[@resource-id="com.uefa.eurofantasy.adhoc:id/btn_view_team"]
 
     Page Should Contain Element    //android.widget.Button[@resource-id="com.uefa.eurofantasy.adhoc:id/btn_view_team"]
+
+*** Settings ***
+Library    AppiumLibrary
+
+*** Variables ***
+${APP_PATH}         D:\Appium Project\app\uefa-gaming-10.7.1-143163962-pre.apk  # Path to your Android app
+${PLATFORM_NAME}   Android
+${DEVICE_NAME}     Vivo 1723           # Or use your device name
+${PLATFORM_VERSION}     9.0
+${UDID}     af1f9b67                  # Use your device's UDID (For real devices)
+${host}     http://127.0.0.1:4723
+
+*** Keywords ***
+Wait And Click Element
+    [Arguments]     ${locator}
+    Wait Until Page Contains Element    ${locator}
+    Click Element    ${locator}`
+
+Launch Android App
+    Open Application    remote_url=${host}   platformName=${PLATFORM_NAME}    deviceName=${DEVICE_NAME}    app=${APP_PATH}    platformVersion=${PLATFORM_VERSION}    udid=${UDID}    automationName=UiAutomator2
+
+Verify Home Screen Is Displayed
+    Wait Until Element Is Visible    xpath=(//android.widget.ImageView[@resource-id="com.bbk.launcher2:id/item_icon"])[12]    10s
+    Element Should Be Visible    xpath=(//android.widget.ImageView[@resource-id="com.bbk.launcher2:id/item_icon"])[12]
+
+Close Application
+    Close Application
+*** Test Cases ***
+Open App And Check Home Screen
+    [Setup]    Launch Android App
+    Verify Home Screen Is Displayed
+    [Teardown]    Close Application
 
 
 
